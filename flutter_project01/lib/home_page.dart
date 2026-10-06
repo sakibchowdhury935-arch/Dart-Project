@@ -11,13 +11,57 @@ class HomePage extends StatelessWidget {
         title: Text("HomePage-64(A)"),
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,
-        leading: Icon(Icons.home),
+        // leading: Icon(Icons.home),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),
           IconButton(onPressed: () {}, icon: Icon(Icons.person)),
         ],
       ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+              decoration: BoxDecoration(color: Colors.blueAccent),
+              accountName: Text("Name"),
+              accountEmail: Text("Email"),
+            ),
+            ListTile(
+              trailing: Icon(Icons.home),
+              title: Text("Homepage"),
+              hoverColor: Colors.green,
+              splashColor: Colors.amber,
+              onTap: () {},
+            ),
+            Divider(color: Colors.blueAccent),
+            ListTile(
+              trailing: Icon(Icons.settings),
+              title: Text("Settings"),
+              hoverColor: Colors.green,
+              splashColor: Colors.amber,
+              onTap: () {},
+            ),
+            Divider(color: Colors.blueAccent),
+            Spacer(),
+            Divider(color: Colors.blueAccent),
+            ListTile(
+              trailing: Icon(Icons.logout),
+              title: Text("Logout"),
+              hoverColor: Colors.green,
+              splashColor: Colors.amber,
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
 
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.blueAccent,
+        foregroundColor: Colors.white,
+        tooltip: "Add something",
+        shape: CircleBorder(),
+        child: Icon(Icons.add),
+      ),
       /*body: Text(
         "Hello Flutter",
         style: TextStyle(fontSize: 30, color: Colors.blue),
